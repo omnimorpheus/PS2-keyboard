@@ -1,0 +1,41 @@
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Users/Student/Desktop/MYCONS.UCF" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Users/Student/Desktop/MYCONS.UCF" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Users/Student/Desktop/MYCONS.UCF" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Users/Student/Desktop/MYCONS.UCF" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Users/Student/Desktop/MYCONS.UCF" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Users/Student/Desktop/MYCONS.UCF" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mycons.ucf" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+map -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -p xc2vp30-ff896-5 -cm area -pr b -k 4 -c 100 -tx off -o keyb_map.ncd keyb.ngd keyb.pcf
+par -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -w -intstyle ise -ol std -t 1 keyb_map.ncd keyb.ncd keyb.pcf
+trce -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -e 3 -s 5 -xml keyb keyb.ncd -o keyb.twr keyb.pcf -ucf mycons.ucf
+bitgen -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -f keyb.ut keyb.ncd
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mycons.ucf" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+map -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -p xc2vp30-ff896-5 -cm area -pr b -k 4 -c 100 -tx off -o keyb_map.ncd keyb.ngd keyb.pcf
+par -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -w -intstyle ise -ol std -t 1 keyb_map.ncd keyb.ncd keyb.pcf
+trce -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -e 3 -s 5 -xml keyb keyb.ncd -o keyb.twr keyb.pcf -ucf mycons.ucf
+bitgen -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -f keyb.ut keyb.ncd
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mycons.ucf" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+map -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -p xc2vp30-ff896-5 -cm area -pr b -k 4 -c 100 -tx off -o keyb_map.ncd keyb.ngd keyb.pcf
+par -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -w -intstyle ise -ol std -t 1 keyb_map.ncd keyb.ncd keyb.pcf
+trce -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -e 3 -s 5 -xml keyb keyb.ncd -o keyb.twr keyb.pcf -ucf mycons.ucf
+bitgen -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -f keyb.ut keyb.ncd
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mycons.ucf" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+map -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -p xc2vp30-ff896-5 -cm area -pr b -k 4 -c 100 -tx off -o keyb_map.ncd keyb.ngd keyb.pcf
+par -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -w -intstyle ise -ol std -t 1 keyb_map.ncd keyb.ncd keyb.pcf
+trce -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -e 3 -s 5 -xml keyb keyb.ncd -o keyb.twr keyb.pcf -ucf mycons.ucf
+bitgen -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -f keyb.ut keyb.ncd
+xst -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -ifn keyb.xst -ofn keyb.syr
+ngdbuild -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mycons.ucf" -p xc2vp30-ff896-5 "keyb.ngc" keyb.ngd
+map -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -p xc2vp30-ff896-5 -cm area -pr b -k 4 -c 100 -tx off -o keyb_map.ncd keyb.ngd keyb.pcf
+par -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -w -intstyle ise -ol std -t 1 keyb_map.ncd keyb.ncd keyb.pcf
+trce -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -e 3 -s 5 -xml keyb keyb.ncd -o keyb.twr keyb.pcf -ucf mycons.ucf
+bitgen -ise "C:/Users/Student/Desktop/temp/lab3/lab3.ise" -intstyle ise -f keyb.ut keyb.ncd

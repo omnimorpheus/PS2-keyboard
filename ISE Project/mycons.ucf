@@ -1,0 +1,7 @@
+NET "kb_clock" LOC = "AG2";
+NET "data" LOC = "AG1";
+
+NET "led[0]" LOC = "AC4";
+NET "led[1]" LOC = "AC3";
+NET "led[2]" LOC = "AA6"; 
+NET "led[3]" LOC = "AA5";

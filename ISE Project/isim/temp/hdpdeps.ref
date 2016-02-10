@@ -1,0 +1,5 @@
+V3 4
+FL C:/Users/Student/Desktop/temp/lab3/keyb.v 2015/10/05.16:44:08 J.36
+MO isim_temp/keyb FL C:/Users/Student/Desktop/temp/lab3/keyb.v
+FL $XILINX/verilog/src/glbl.v 2007/05/18.17:22:56 J.36
+MO isim_temp/glbl FL $XILINX/verilog/src/glbl.v

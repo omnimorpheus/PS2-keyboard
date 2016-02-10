@@ -1,0 +1,393 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.08 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.08 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: keyb.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "keyb.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "keyb"
+Output Format                      : NGC
+Target Device                      : xc2vp30-5-ff896
+
+---- Source Options
+Top Module Name                    : keyb
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : keyb.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "keyb.v" in library work
+Module <keyb> compiled
+No errors in compilation
+Analysis of file <"keyb.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <keyb> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <keyb>.
+Module <keyb> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <keyb>.
+    Related source file is "keyb.v".
+    Found 4-bit register for signal <led>.
+    Found 1-bit register for signal <break>.
+    Found 4-bit up counter for signal <count>.
+    Found 4-bit comparator lessequal for signal <count$cmp_le0000> created at line 61.
+    Found 8-bit register for signal <d_current>.
+    Found 8-bit register for signal <d_previous>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <keyb> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 11
+ 1-bit register                                        : 9
+ 4-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 4-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx92i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+# Comparators                                          : 1
+ 4-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <keyb> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block keyb, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 25
+ Flip-Flops                                            : 25
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : keyb.ngr
+Top Level Output File Name         : keyb
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 6
+
+Cell Usage :
+# BELS                             : 37
+#      INV                         : 2
+#      LUT2                        : 4
+#      LUT3                        : 3
+#      LUT3_L                      : 2
+#      LUT4                        : 22
+#      LUT4_D                      : 2
+#      LUT4_L                      : 2
+# FlipFlops/Latches                : 25
+#      FD_1                        : 1
+#      FDE                         : 12
+#      FDE_1                       : 8
+#      FDRE                        : 3
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 1
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-5 
+
+ Number of Slices:                      20  out of  13696     0%  
+ Number of Slice Flip Flops:            25  out of  27392     0%  
+ Number of 4 input LUTs:                37  out of  27392     0%  
+ Number of IOs:                          6
+ Number of bonded IOBs:                  6  out of    556     1%  
+ Number of GCLKs:                        1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+kb_clock                           | BUFGP                  | 13    |
+break                              | NONE(d_previous_2)     | 12    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.653ns (Maximum Frequency: 273.729MHz)
+   Minimum input arrival time before clock: 1.878ns
+   Maximum output required time after clock: 3.997ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'kb_clock'
+  Clock period: 3.003ns (frequency: 332.973MHz)
+  Total number of paths / destination ports: 80 / 21
+-------------------------------------------------------------------------
+Delay:               3.003ns (Levels of Logic = 1)
+  Source:            count_1 (FF)
+  Destination:       count_0 (FF)
+  Source Clock:      kb_clock falling
+  Destination Clock: kb_clock falling
+
+  Data Path: count_1 to count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            14   0.419   0.906  count_1 (count_1)
+     LUT4:I0->O            4   0.351   0.559  count_and00001 (count_and0000)
+     FDSE:S                    0.768          count_0
+    ----------------------------------------
+    Total                      3.003ns (1.538ns logic, 1.465ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'break'
+  Clock period: 3.653ns (frequency: 273.729MHz)
+  Total number of paths / destination ports: 74 / 4
+-------------------------------------------------------------------------
+Delay:               3.653ns (Levels of Logic = 4)
+  Source:            d_previous_1 (FF)
+  Destination:       led_3 (FF)
+  Source Clock:      break rising
+  Destination Clock: break rising
+
+  Data Path: d_previous_1 to led_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.419   0.672  d_previous_1 (d_previous_1)
+     LUT4_D:I0->LO         1   0.351   0.260  led_mux0000<0>511 (N177)
+     LUT2:I0->O            1   0.351   0.480  led_mux0000<0>69_SW0 (N169)
+     LUT4_L:I2->LO         1   0.351   0.155  led_mux0000<0>83_SW0 (N167)
+     LUT4:I3->O            1   0.351   0.000  led_mux0000<0>92 (led_mux0000<0>)
+     FDE:D                     0.263          led_3
+    ----------------------------------------
+    Total                      3.653ns (2.086ns logic, 1.567ns route)
+                                       (57.1% logic, 42.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'kb_clock'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 1)
+  Source:            data (PAD)
+  Destination:       d_current_0 (FF)
+  Destination Clock: kb_clock falling
+
+  Data Path: data to d_current_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.969   0.646  data_IBUF (data_IBUF)
+     FDE_1:D                   0.263          d_current_0
+    ----------------------------------------
+    Total                      1.878ns (1.232ns logic, 0.646ns route)
+                                       (65.6% logic, 34.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'break'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.997ns (Levels of Logic = 1)
+  Source:            led_3 (FF)
+  Destination:       led<3> (PAD)
+  Source Clock:      break rising
+
+  Data Path: led_3 to led<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.419   0.448  led_3 (led_3)
+     OBUF:I->O                 3.130          led_3_OBUF (led<3>)
+    ----------------------------------------
+    Total                      3.997ns (3.549ns logic, 0.448ns route)
+                                       (88.8% logic, 11.2% route)
+
+=========================================================================
+CPU : 4.38 / 4.48 s | Elapsed : 4.00 / 4.00 s
+ 
+--> 
+
+Total memory usage is 234488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

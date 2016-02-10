@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map J.36 on Mon Oct 05 16:44:41 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "data" LOCATE = SITE "AG1" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "AC4" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "AC3" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "AA6" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "AA5" LEVEL 1;
+COMP "kb_clock" LOCATE = SITE "AG2" LEVEL 1;
+NET "kb_clock_BUFGP/IBUFG" BEL "kb_clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
